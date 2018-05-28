@@ -13,6 +13,8 @@
 		9E9AD08F20BA8B0200B283DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AD08E20BA8B0200B283DA /* Assets.xcassets */; };
 		9E9AD09220BA8B0200B283DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AD09020BA8B0200B283DA /* LaunchScreen.storyboard */; };
 		9E9AD09A20BA927D00B283DA /* SigninSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */; };
+		9E9AD09C20BC2EA200B283DA /* DriverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */; };
+		9E9AD09E20BC303400B283DA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9E9AD09120BA8B0200B283DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E9AD09320BA8B0200B283DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignupViewController.swift; sourceTree = "<group>"; };
+		9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeViewController.swift; sourceTree = "<group>"; };
+		9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				9E9AD08720BA8B0100B283DA /* AppDelegate.swift */,
 				9E9AD08920BA8B0100B283DA /* ViewController.swift */,
 				9E9AD08B20BA8B0100B283DA /* Main.storyboard */,
+				9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */,
+				9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */,
 				9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */,
 				9E9AD08E20BA8B0200B283DA /* Assets.xcassets */,
 				9E9AD09020BA8B0200B283DA /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9AD08A20BA8B0100B283DA /* ViewController.swift in Sources */,
+				9E9AD09C20BC2EA200B283DA /* DriverHomeViewController.swift in Sources */,
 				9E9AD08820BA8B0100B283DA /* AppDelegate.swift in Sources */,
 				9E9AD09A20BA927D00B283DA /* SigninSignupViewController.swift in Sources */,
+				9E9AD09E20BC303400B283DA /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
