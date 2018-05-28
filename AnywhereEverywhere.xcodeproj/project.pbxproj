@@ -20,6 +20,7 @@
 		9E9AD0A420BC35D100B283DA /* TopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A320BC35D100B283DA /* TopupViewController.swift */; };
 		9E9AD0A620BC361900B283DA /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A520BC361900B283DA /* PasswordViewController.swift */; };
 		9E9AD0A820BC364A00B283DA /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */; };
+		9E9AD0AA20BCA1C800B283DA /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A920BCA1C800B283DA /* HelpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9E9AD0A320BC35D100B283DA /* TopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupViewController.swift; sourceTree = "<group>"; };
 		9E9AD0A520BC361900B283DA /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		9E9AD0A920BCA1C800B283DA /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				9E9AD08720BA8B0100B283DA /* AppDelegate.swift */,
 				9E9AD08920BA8B0100B283DA /* ViewController.swift */,
 				9E9AD08B20BA8B0100B283DA /* Main.storyboard */,
+				9E9AD0A920BCA1C800B283DA /* HelpViewController.swift */,
 				9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */,
 				9E9AD0A520BC361900B283DA /* PasswordViewController.swift */,
 				9E9AD0A320BC35D100B283DA /* TopupViewController.swift */,
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9AD0AA20BCA1C800B283DA /* HelpViewController.swift in Sources */,
 				9E9AD08A20BA8B0100B283DA /* ViewController.swift in Sources */,
 				9E9AD0A820BC364A00B283DA /* PasswordResetViewController.swift in Sources */,
 				9E9AD09C20BC2EA200B283DA /* DriverHomeViewController.swift in Sources */,
