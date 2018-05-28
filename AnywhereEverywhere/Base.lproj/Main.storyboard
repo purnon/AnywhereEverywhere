@@ -582,14 +582,13 @@
                                     <constraint firstAttribute="height" constant="40" id="la6-iA-yWh"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T48-wc-zZw">
-                                <rect key="frame" x="10" y="267" width="299" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T48-wc-zZw">
+                                <rect key="frame" x="10" y="420" width="300" height="50"/>
                                 <subviews>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="rSp-sg-uQr">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rSp-sg-uQr" id="dlg-2u-lGu">
-                                            <rect key="frame" x="0.0" y="0.0" width="299" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -608,10 +607,13 @@
                             <constraint firstItem="x18-6G-lHL" firstAttribute="trailing" secondItem="TAL-lz-SCc" secondAttribute="trailing" constant="20" id="CXu-av-CVB"/>
                             <constraint firstItem="HtT-bz-IbZ" firstAttribute="top" secondItem="v0C-3u-Exf" secondAttribute="bottom" constant="10" id="DpB-kP-dOW"/>
                             <constraint firstItem="TAL-lz-SCc" firstAttribute="leading" secondItem="x18-6G-lHL" secondAttribute="leading" constant="4" id="Fzs-Hp-96w"/>
+                            <constraint firstAttribute="trailing" secondItem="T48-wc-zZw" secondAttribute="trailing" constant="10" id="ORW-ia-8ZE"/>
                             <constraint firstItem="TAL-lz-SCc" firstAttribute="top" secondItem="DAm-fs-8qC" secondAttribute="bottom" constant="8" id="Orf-eG-JXb"/>
                             <constraint firstItem="DAm-fs-8qC" firstAttribute="top" secondItem="UjS-Us-8NQ" secondAttribute="top" constant="20" id="SWe-nY-ZJa"/>
                             <constraint firstAttribute="trailing" secondItem="v0C-3u-Exf" secondAttribute="trailing" constant="10" id="TYk-I8-UnW"/>
+                            <constraint firstItem="T48-wc-zZw" firstAttribute="leading" secondItem="UjS-Us-8NQ" secondAttribute="leading" constant="10" id="gCu-9B-4Ib"/>
                             <constraint firstItem="v0C-3u-Exf" firstAttribute="top" secondItem="DAm-fs-8qC" secondAttribute="bottom" constant="60" id="k9G-XL-Jxj"/>
+                            <constraint firstItem="x18-6G-lHL" firstAttribute="bottom" secondItem="T48-wc-zZw" secondAttribute="bottom" constant="10" id="sUo-U9-oGe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x18-6G-lHL"/>
                     </view>
