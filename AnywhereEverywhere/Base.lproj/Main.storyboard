@@ -390,10 +390,10 @@
             </objects>
             <point key="canvasLocation" x="1547" y="-596"/>
         </scene>
-        <!--View Controller-->
+        <!--Social Media View Controller-->
         <scene sceneID="JFO-5m-d95">
             <objects>
-                <viewController id="8Sk-30-aNM" sceneMemberID="viewController">
+                <viewController id="8Sk-30-aNM" customClass="SocialMediaViewController" customModule="AnywhereEverywhere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQV-NT-20A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,10 +477,10 @@
             </objects>
             <point key="canvasLocation" x="2308" y="-596"/>
         </scene>
-        <!--View Controller-->
+        <!--Earning View Controller-->
         <scene sceneID="1Sr-FX-C77">
             <objects>
-                <viewController id="STk-1t-bzi" sceneMemberID="viewController">
+                <viewController id="STk-1t-bzi" customClass="EarningViewController" customModule="AnywhereEverywhere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UjS-Us-8NQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -614,10 +614,10 @@
             </objects>
             <point key="canvasLocation" x="3021" y="-596"/>
         </scene>
-        <!--View Controller-->
+        <!--Topup View Controller-->
         <scene sceneID="LU1-z2-4FS">
             <objects>
-                <viewController id="euS-Uc-o5P" sceneMemberID="viewController">
+                <viewController id="euS-Uc-o5P" customClass="TopupViewController" customModule="AnywhereEverywhere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y9Q-6i-QTE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -855,10 +855,10 @@
             </objects>
             <point key="canvasLocation" x="4393.125" y="-597.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Password Reset View Controller-->
         <scene sceneID="8QZ-lB-Tfi">
             <objects>
-                <viewController id="kNQ-po-EUn" sceneMemberID="viewController">
+                <viewController id="kNQ-po-EUn" customClass="PasswordResetViewController" customModule="AnywhereEverywhere" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lSA-MZ-iyY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

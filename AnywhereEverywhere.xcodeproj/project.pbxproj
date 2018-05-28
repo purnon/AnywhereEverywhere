@@ -15,6 +15,11 @@
 		9E9AD09A20BA927D00B283DA /* SigninSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */; };
 		9E9AD09C20BC2EA200B283DA /* DriverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */; };
 		9E9AD09E20BC303400B283DA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */; };
+		9E9AD0A020BC353000B283DA /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD09F20BC353000B283DA /* SocialMediaViewController.swift */; };
+		9E9AD0A220BC359100B283DA /* EarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A120BC359100B283DA /* EarningViewController.swift */; };
+		9E9AD0A420BC35D100B283DA /* TopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A320BC35D100B283DA /* TopupViewController.swift */; };
+		9E9AD0A620BC361900B283DA /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A520BC361900B283DA /* PasswordViewController.swift */; };
+		9E9AD0A820BC364A00B283DA /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignupViewController.swift; sourceTree = "<group>"; };
 		9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeViewController.swift; sourceTree = "<group>"; };
 		9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		9E9AD09F20BC353000B283DA /* SocialMediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
+		9E9AD0A120BC359100B283DA /* EarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningViewController.swift; sourceTree = "<group>"; };
+		9E9AD0A320BC35D100B283DA /* TopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupViewController.swift; sourceTree = "<group>"; };
+		9E9AD0A520BC361900B283DA /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				9E9AD08720BA8B0100B283DA /* AppDelegate.swift */,
 				9E9AD08920BA8B0100B283DA /* ViewController.swift */,
 				9E9AD08B20BA8B0100B283DA /* Main.storyboard */,
+				9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */,
+				9E9AD0A520BC361900B283DA /* PasswordViewController.swift */,
+				9E9AD0A320BC35D100B283DA /* TopupViewController.swift */,
+				9E9AD0A120BC359100B283DA /* EarningViewController.swift */,
+				9E9AD09F20BC353000B283DA /* SocialMediaViewController.swift */,
 				9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */,
 				9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */,
 				9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */,
@@ -145,10 +160,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9AD08A20BA8B0100B283DA /* ViewController.swift in Sources */,
+				9E9AD0A820BC364A00B283DA /* PasswordResetViewController.swift in Sources */,
 				9E9AD09C20BC2EA200B283DA /* DriverHomeViewController.swift in Sources */,
 				9E9AD08820BA8B0100B283DA /* AppDelegate.swift in Sources */,
+				9E9AD0A420BC35D100B283DA /* TopupViewController.swift in Sources */,
 				9E9AD09A20BA927D00B283DA /* SigninSignupViewController.swift in Sources */,
+				9E9AD0A020BC353000B283DA /* SocialMediaViewController.swift in Sources */,
 				9E9AD09E20BC303400B283DA /* RegistrationViewController.swift in Sources */,
+				9E9AD0A220BC359100B283DA /* EarningViewController.swift in Sources */,
+				9E9AD0A620BC361900B283DA /* PasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
