@@ -73,6 +73,9 @@
                                 <rect key="frame" x="218" y="131" width="97" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="next_icon"/>
+                                <connections>
+                                    <segue destination="8Sk-30-aNM" kind="show" id="WoT-to-EZW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eha-ja-t9H">
                                 <rect key="frame" x="41" y="213" width="134" height="24"/>
@@ -92,6 +95,9 @@
                                 <rect key="frame" x="218" y="290" width="97" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="next_icon"/>
+                                <connections>
+                                    <segue destination="fSB-tH-iYf" kind="show" id="vkI-dN-x3L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.17254901960784313" green="0.22745098039215686" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -222,6 +228,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zss-09-v3d"/>
                     </view>
+                    <connections>
+                        <outlet property="mainMapView" destination="6it-Bt-VTq" id="gce-u2-J67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBz-nU-dQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
