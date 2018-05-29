@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="g0Y-yT-zAB">
             <objects>
-                <viewController id="Mik-oG-dN7" customClass="ViewController" customModule="AnywhereEverywhere" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Mik-oG-dN7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LIs-Zs-NEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUZ-PL-tMV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-551" y="-591"/>
+            <point key="canvasLocation" x="-906" y="-764"/>
         </scene>
     </scenes>
     <resources>
