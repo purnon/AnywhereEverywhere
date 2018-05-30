@@ -7,17 +7,17 @@
 //
 
 import UIKit
-import MapKit
+//import MapKit
 import GoogleMaps
 
 class DriverHomeViewController: UIViewController {
 
-    @IBOutlet weak var mainMapView: MKMapView!
+    //@IBOutlet weak var mainMapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GMSServices.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
+        //GMSServices.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
         //GMSPlacesClient.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 12.0)

@@ -21,13 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RRL-Wg-pMw">
-                                <rect key="frame" x="40" y="390" width="260" height="40"/>
+                                <rect key="frame" x="40" y="390" width="160" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6k-Fm-4P2">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
                                         <color key="backgroundColor" white="0.88554687499999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Zp4-L8-3Fb"/>
                                             <constraint firstAttribute="height" constant="40" id="ldC-UX-VsN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -39,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0k-TZ-sms">
-                                        <rect key="frame" x="140" y="0.0" width="120" height="40"/>
+                                        <rect key="frame" x="90" y="0.0" width="70" height="40"/>
                                         <color key="backgroundColor" red="0.02517017492" green="0.0086345849570000008" blue="0.090997409330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ADw-VA-p45"/>
@@ -130,11 +129,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGQ-fn-jIo">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D03-dd-WgT">
-                                                        <rect key="frame" x="227" y="4" width="80" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button" image="ON_button_1"/>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cl7-DU-hww">
                                                         <rect key="frame" x="7" y="-1" width="56" height="52"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -153,6 +147,11 @@
                                                             <segue destination="L7H-cI-HEa" kind="show" id="PTT-Ro-ho1"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D03-dd-WgT">
+                                                        <rect key="frame" x="227" y="4" width="80" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button" image="ON_button_1"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
@@ -166,14 +165,11 @@
                                             <constraint firstItem="dGQ-fn-jIo" firstAttribute="top" secondItem="sAi-4V-6Ma" secondAttribute="top" id="r5g-SI-kIp"/>
                                         </constraints>
                                     </stackView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6it-Bt-VTq">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="350"/>
-                                    </mapView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-oj-gYJ">
-                                        <rect key="frame" x="0.0" y="400" width="320" height="80"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="430"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-aL-f9V">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="430"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="eAC-SX-W3k"/>
@@ -184,7 +180,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-Bg-VCM">
-                                                <rect key="frame" x="80" y="0.0" width="133.5" height="80"/>
+                                                <rect key="frame" x="80" y="0.0" width="133.5" height="430"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="mWu-Py-1Sw"/>
@@ -197,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSD-v9-VyO">
-                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="80"/>
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="430"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="3to-GH-w5B"/>
@@ -228,9 +224,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zss-09-v3d"/>
                     </view>
-                    <connections>
-                        <outlet property="mainMapView" destination="6it-Bt-VTq" id="gce-u2-J67"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBz-nU-dQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
