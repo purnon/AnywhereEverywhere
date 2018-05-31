@@ -18,23 +18,23 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mapView.isMyLocationEnabled=true
-        self.mapView.settings.compassButton=true
-        self.mapView.delegate = self
+        //self.mapView.isMyLocationEnabled=true
+        //self.mapView.settings.compassButton=true
+        //self.mapView.delegate = self
         
-        /*
+        
         let camera = GMSCameraPosition.camera(withLatitude: 23.791630, longitude: 90.401872, zoom: 17.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+        self.mapView.camera=camera
+        
         
         // Creates a marker in the center of the map.
-        let marker = GMSMarker()
+        let initialLocation = CLLocationCoordinate2DMake(23.791630, 90.401872)
+        let marker = GMSMarker(position: initialLocation)
         marker.position = CLLocationCoordinate2D(latitude: 23.791630, longitude: 90.401872)
         marker.title = "Banani Road-6"
         marker.snippet = "Dhaka"
         marker.map = mapView
- */
-        
+ 
     }
 
     override func didReceiveMemoryWarning() {
