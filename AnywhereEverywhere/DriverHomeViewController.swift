@@ -10,26 +10,30 @@ import UIKit
 //import MapKit
 import GoogleMaps
 
-class DriverHomeViewController: UIViewController {
+class DriverHomeViewController: UIViewController, GMSMapViewDelegate {
 
+    @IBOutlet weak var mapView: GMSMapView!
     //@IBOutlet weak var mainMapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //GMSServices.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
-        //GMSPlacesClient.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
-        //51.888966, -0.371633
-        let camera = GMSCameraPosition.camera(withLatitude: 51.888966, longitude: 0.371633, zoom: 13.0)
+        self.mapView.isMyLocationEnabled=true
+        self.mapView.settings.compassButton=true
+        self.mapView.delegate = self
+        
+        /*
+        let camera = GMSCameraPosition.camera(withLatitude: 23.791630, longitude: 90.401872, zoom: 17.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 51.888966, longitude: 0.371633)
-        marker.title = "Wigmore Ln, Luton"
-        marker.snippet = "London, UK"
+        marker.position = CLLocationCoordinate2D(latitude: 23.791630, longitude: 90.401872)
+        marker.title = "Banani Road-6"
+        marker.snippet = "Dhaka"
         marker.map = mapView
+ */
         
     }
 

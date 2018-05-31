@@ -165,11 +165,15 @@
                                             <constraint firstItem="dGQ-fn-jIo" firstAttribute="top" secondItem="sAi-4V-6Ma" secondAttribute="top" id="r5g-SI-kIp"/>
                                         </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCr-Ec-Ore" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="350"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-oj-gYJ">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="430"/>
+                                        <rect key="frame" x="0.0" y="400" width="320" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfe-aL-f9V">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="430"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="eAC-SX-W3k"/>
@@ -180,7 +184,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-Bg-VCM">
-                                                <rect key="frame" x="80" y="0.0" width="133.5" height="430"/>
+                                                <rect key="frame" x="80" y="0.0" width="133.5" height="80"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="mWu-Py-1Sw"/>
@@ -193,7 +197,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSD-v9-VyO">
-                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="430"/>
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="80"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="3to-GH-w5B"/>
@@ -224,6 +228,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zss-09-v3d"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="eCr-Ec-Ore" id="zMH-eC-EbD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBz-nU-dQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
