@@ -8,35 +8,61 @@
 
 import UIKit
 //import MapKit
+import CoreLocation
 import GoogleMaps
 
-class DriverHomeViewController: UIViewController, GMSMapViewDelegate {
+class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: GMSMapView!
-    //@IBOutlet weak var mainMapView: MKMapView!
+    
+    let locationManager=CLLocationManager()
+    var currentLocation = CLLocation()
+    var lat = Double(0)
+    var lng = Double(0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.mapView.isMyLocationEnabled=true
-        //self.mapView.settings.compassButton=true
-        //self.mapView.delegate = self
+        locationManager.delegate=self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.requestAlwaysAuthorization()
+        locationManager.stopMonitoringSignificantLocationChanges()
+        
+        locationAuthStatus()
         
         
-        let camera = GMSCameraPosition.camera(withLatitude: 23.791630, longitude: 90.401872, zoom: 17.0)
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 17.0)
         self.mapView.camera=camera
         
         
         // Creates a marker in the center of the map.
-        let initialLocation = CLLocationCoordinate2DMake(23.791630, 90.401872)
+        let initialLocation = CLLocationCoordinate2DMake(lat, lng)
         let marker = GMSMarker(position: initialLocation)
-        marker.position = CLLocationCoordinate2D(latitude: 23.791630, longitude: 90.401872)
+        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         marker.title = "Banani Road-6"
         marker.snippet = "Dhaka"
         marker.map = mapView
  
     }
+    
 
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            currentLocation=locationManager.location!
+            lat = currentLocation.coordinate.latitude
+            lng = currentLocation.coordinate.longitude
+            
+        } else {
+            locationManager.requestAlwaysAuthorization()
+            locationAuthStatus()
+        }
+        
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
