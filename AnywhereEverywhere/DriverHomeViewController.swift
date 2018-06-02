@@ -29,6 +29,10 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         locationManager.requestAlwaysAuthorization()
         locationManager.stopMonitoringSignificantLocationChanges()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
         locationAuthStatus()
         
         
@@ -40,10 +44,9 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         let initialLocation = CLLocationCoordinate2DMake(lat, lng)
         let marker = GMSMarker(position: initialLocation)
         marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-        marker.title = "Banani Road-6"
-        marker.snippet = "Dhaka"
+        marker.title = "Your Current Location"
+        marker.snippet = "-----------"
         marker.map = mapView
- 
     }
     
 
