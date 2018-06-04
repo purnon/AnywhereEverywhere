@@ -11,8 +11,54 @@ import MapKit
 import CoreLocation
 import GoogleMaps
 
-class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
+class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
 
+    //I am checking here some code from
+    //https://medium.freecodecamp.org/how-you-can-use-the-google-maps-sdk-with-ios-using-swift-4-a9bba26d9c4d
+    
+    
+    @IBOutlet fileprivate weak var mapView: GMSMapView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 6.0)
+        mapView.camera = camera
+        showMarker(position: camera.target)
+        
+        mapView.settings.myLocationButton = true
+        
+        
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+        
+    }
+    
+    func showMarker(position: CLLocationCoordinate2D){
+        let marker = GMSMarker()
+        marker.position = position
+        marker.title = "Palo Alto"
+        marker.snippet = "San Francisco"
+        marker.map = mapView
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // THE COMMENTED CODE START HERE - CHECKING FOR GOOGLE MAPS
+    /*
+    
     @IBOutlet weak var mapView: GMSMapView!
     
     let locationManager = CLLocationManager()
@@ -48,6 +94,15 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
     }
     
     
+    @IBAction func btnONtest(_ sender: Any) {
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+        
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
@@ -71,6 +126,8 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         marker.map = mapView
         
         //open(scheme: "https://www.google.com")
+        
+        
     }
     
  
@@ -109,11 +166,6 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
     
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -125,4 +177,23 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
     }
     */
 
+    
+    
+    
+    
+    // THIS IS END OF COMMENTED CODE - CHECKING FOR GOOGLE MAPS 0N 05 Jun 2018
+ 
+ */
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
 }
+
+
+

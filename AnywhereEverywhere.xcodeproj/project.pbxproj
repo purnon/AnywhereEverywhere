@@ -30,6 +30,7 @@
 		38937DE5557979B3E3C2B33E /* Pods-AnywhereEverywhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnywhereEverywhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnywhereEverywhere/Pods-AnywhereEverywhere.release.xcconfig"; sourceTree = "<group>"; };
 		7E6654B70DAA18A25C24DECC /* Pods_AnywhereEverywhere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnywhereEverywhere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E044E8C20C2ABF800B21A97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9E47849720C5F42F00CA7F02 /* AnywhereEverywhere.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnywhereEverywhere.entitlements; sourceTree = "<group>"; };
 		9E9AD08420BA8B0100B283DA /* AnywhereEverywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnywhereEverywhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9AD08720BA8B0100B283DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E9AD08920BA8B0100B283DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		9E9AD08620BA8B0100B283DA /* AnywhereEverywhere */ = {
 			isa = PBXGroup;
 			children = (
+				9E47849720C5F42F00CA7F02 /* AnywhereEverywhere.entitlements */,
 				9E9AD08720BA8B0100B283DA /* AppDelegate.swift */,
 				9E9AD08920BA8B0100B283DA /* ViewController.swift */,
 				9E9AD08B20BA8B0100B283DA /* Main.storyboard */,
@@ -153,6 +155,11 @@
 				TargetAttributes = {
 					9E9AD08320BA8B0100B283DA = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -388,6 +395,7 @@
 			baseConfigurationReference = 1979295F06CF3C2DF8788EA1 /* Pods-AnywhereEverywhere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnywhereEverywhere/AnywhereEverywhere.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2T5K75Y2G;
 				INFOPLIST_FILE = AnywhereEverywhere/Info.plist;
@@ -407,6 +415,7 @@
 			baseConfigurationReference = 38937DE5557979B3E3C2B33E /* Pods-AnywhereEverywhere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnywhereEverywhere/AnywhereEverywhere.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W2T5K75Y2G;
 				INFOPLIST_FILE = AnywhereEverywhere/Info.plist;

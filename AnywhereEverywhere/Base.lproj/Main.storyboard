@@ -141,6 +141,9 @@
                                                         <rect key="frame" x="227" y="4" width="80" height="40"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button" image="ON_button_1"/>
+                                                        <connections>
+                                                            <action selector="btnONtest:" destination="Jf2-uN-e8I" eventType="touchUpInside" id="VJn-8C-IP4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-aM-pLv">
                                                         <rect key="frame" x="104" y="10" width="112" height="30"/>
@@ -234,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBz-nU-dQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916.875" y="-1156.25"/>
+            <point key="canvasLocation" x="1076" y="-1630"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="Mm8-eU-N8h">
