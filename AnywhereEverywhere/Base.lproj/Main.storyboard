@@ -137,8 +137,13 @@
                                                             <segue destination="kNQ-po-EUn" kind="show" id="Cgc-1V-2SF"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D03-dd-WgT">
+                                                        <rect key="frame" x="227" y="4" width="80" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button" image="ON_button_1"/>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-aM-pLv">
-                                                        <rect key="frame" x="95" y="10" width="112" height="30"/>
+                                                        <rect key="frame" x="104" y="10" width="112" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Hi, Kazi">
                                                             <color key="titleColor" white="0.92776227680000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,11 +151,6 @@
                                                         <connections>
                                                             <segue destination="L7H-cI-HEa" kind="show" id="PTT-Ro-ho1"/>
                                                         </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D03-dd-WgT">
-                                                        <rect key="frame" x="227" y="4" width="80" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button" image="ON_button_1"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.2274509804" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -234,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBz-nU-dQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="-1156"/>
+            <point key="canvasLocation" x="916.875" y="-1156.25"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="Mm8-eU-N8h">

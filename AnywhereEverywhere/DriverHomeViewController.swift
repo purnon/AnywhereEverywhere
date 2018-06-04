@@ -15,46 +15,40 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
 
     @IBOutlet weak var mapView: GMSMapView!
     
-    var mapView1 = GMSMapView()
-    
     let locationManager = CLLocationManager()
     var currentLocation = CLLocation(latitude: 23, longitude: 90)
     var lat = Double(0)
     var lng = Double(0)
-    
+    var marker = GMSMarker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 17.0)
         self.mapView.camera=camera
         //mapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         
-        //view = mapView
-        
-        let initialLocation = CLLocationCoordinate2DMake(lat, lng)
-        let marker = GMSMarker(position: initialLocation)
+        lat = -33.86
+        lng = 151.20
+        let currentLocation = CLLocationCoordinate2DMake(lat, lng)
+        marker = GMSMarker(position: currentLocation)
         marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
         marker.title = "Your Current Location"
-        marker.snippet = "-----------"
-        marker.map = mapView1
+        marker.snippet = "Your City"
+        marker.map = mapView
         
-        /*
+        
         locationManager.delegate=self
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        
-        */
-        
     }
     
     
     
-    /* ===================
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         //let center = location.coordinate
@@ -62,7 +56,6 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         //let region = MKCoordinateRegion(center: center, span: span)
         lat = location.coordinate.latitude
         lng = location.coordinate.longitude
-     
     }
     
     
@@ -70,21 +63,34 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 17.0)
         self.mapView.camera=camera
         // Creates a marker in the center of the map.
-        let initialLocation = CLLocationCoordinate2DMake(lat, lng)
-        let marker = GMSMarker(position: initialLocation)
+        let currentLocation = CLLocationCoordinate2DMake(lat, lng)
+        marker = GMSMarker(position: currentLocation)
         marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-        marker.title = "Your Current Location"
-        marker.snippet = "-----------"
+        marker.title = "Your current location"
+        marker.snippet = "Your City"
         marker.map = mapView
         
-        mapView.settings.myLocationButton = true
+        //open(scheme: "https://www.google.com")
     }
-
-    */
+    
  
- 
- 
- 
+    func open(scheme: String) {
+        if let url = URL(string: scheme) {
+            if #available(iOS 10, *) { // For ios 10 and greater
+                UIApplication.shared.open(url, options: [:],
+                                          completionHandler: {
+                                            (success) in
+                                            print("Open \(scheme): \(success)")
+                })
+            } else { // for below ios 10.
+                let success = UIApplication.shared.openURL(url)
+                print("Open \(scheme): \(success)")
+            }
+        }
+    }
+    
+    
+    
     /*
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
