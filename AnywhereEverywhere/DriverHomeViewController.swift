@@ -27,12 +27,13 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         super.viewDidLoad()
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        mapView1 = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
-        mapView1.isMyLocationEnabled = true
-        mapView1.settings.compassButton = true
-        mapView1.settings.myLocationButton = true
+        self.mapView.camera=camera
+        //mapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+        mapView.isMyLocationEnabled = true
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
         
-        view = mapView1
+        //view = mapView
         
         let initialLocation = CLLocationCoordinate2DMake(lat, lng)
         let marker = GMSMarker(position: initialLocation)
@@ -51,10 +52,6 @@ class DriverHomeViewController: UIViewController, GMSMapViewDelegate, CLLocation
         
     }
     
-    override func viewWillLayoutSubviews() {
-        mapView1.padding = UIEdgeInsetsMake(self.topLayoutGuide.length - 25, 0, self.bottomLayoutGuide.length - 25, 0)
-        
-    }
     
     
     /* ===================
