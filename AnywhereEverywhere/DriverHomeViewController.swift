@@ -21,35 +21,69 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 17.0)
         mapView.camera = camera
         showMarker(position: camera.target)
         
+        mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
+        
+        /*
+        UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
+
         
         
         if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
             UIApplication.shared.openURL(URL(string:
-                "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+                "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
         } else {
-            print("Can't use comgooglemaps://");
+           print("Can't use comgooglemaps://");
         }
+        */
         
     }
     
     func showMarker(position: CLLocationCoordinate2D){
         let marker = GMSMarker()
         marker.position = position
+        marker.icon = GMSMarker.markerImage(with: .black)
+        marker.isFlat = true
         marker.title = "Palo Alto"
         marker.snippet = "San Francisco"
         marker.map = mapView
     }
     
     
+    @IBAction func btnONtest(_ sender: Any) {
+        
+        let primaryContactFullAddress = "M-45 - Abu Dhabi"
+        let testURL: NSURL = NSURL(string: "comgooglemaps-x-callback://")!
+        if UIApplication.shared.canOpenURL(testURL as URL) {
+            
+        if let address = primaryContactFullAddress.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+            
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+                UIApplication.shared.openURL(URL(string:
+                    "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+            } else {
+                print("Can't use comgooglemaps://");
+            }
+            
+            /* ====================== this part working ok with google navigation
+            let directionsRequest: String = "comgooglemaps-x-callback://" + "?daddr=\(address)" + "&x-success=sourceapp://?resume=true&x-source=AirApp"
+                //let directionsURL: NSURL = NSURL(string: directionsRequest)!
+                UIApplication.shared.openURL(URL(string: directionsRequest)!)
+            } else {
+                NSLog("Can't use comgooglemaps-x-callback:// on this device.")
+             ====================== this part working ok with google navigation
+            */ 
+ 
+            }
+ 
+        
+        }
     
-    
-    
-    
+    }
     
     
     
