@@ -21,10 +21,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RRL-Wg-pMw">
-                                <rect key="frame" x="40" y="390" width="160" height="40"/>
+                                <rect key="frame" x="40" y="390" width="240" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6k-Fm-4P2">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
                                         <color key="backgroundColor" white="0.88554687499999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ldC-UX-VsN"/>
@@ -38,11 +38,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0k-TZ-sms">
-                                        <rect key="frame" x="90" y="0.0" width="70" height="40"/>
+                                        <rect key="frame" x="130" y="0.0" width="110" height="40"/>
                                         <color key="backgroundColor" red="0.02517017492" green="0.0086345849570000008" blue="0.090997409330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ADw-VA-p45"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="bdp-Uc-K7b"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Sign UP">
@@ -107,6 +106,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gWW-gl-jdk"/>
                     </view>
+                    <connections>
+                        <outlet property="btnEmailID" destination="6NP-XV-Zfg" id="9MH-GO-NyZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXr-QR-e6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

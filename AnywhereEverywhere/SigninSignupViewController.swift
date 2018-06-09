@@ -10,10 +10,28 @@ import UIKit
 
 class SigninSignupViewController: UIViewController {
 
+    @IBOutlet weak var btnEmailID: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        btnEmailID.isHidden = true
+        
+        let jsonUrlString = "https://www.appae.net/grabacab/public/api/provider/oauth/token"
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            let dataString = String(data: data, encoding: .utf8)
+            print(dataString)
+        
+        }.resume()
+        
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

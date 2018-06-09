@@ -30,9 +30,6 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
         
         /*
         UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
-
-        
-        
         if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
             UIApplication.shared.openURL(URL(string:
                 "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
@@ -41,12 +38,21 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
         }
         */
         
+        self.view.addSubview(btnMyLocation)
+        btnMyLocation.setTitle("Pickup", for:UIControlState.normal)
+        btnMyLocation.setTitleColor(UIColor.black, for: UIControlState.normal)
+        btnMyLocation.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60).isActive=true
+        btnMyLocation.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive=true
+        btnMyLocation.widthAnchor.constraint(equalToConstant: 60).isActive=true
+        btnMyLocation.heightAnchor.constraint(equalToConstant: 30).isActive=true
+        btnMyLocation.isHidden = true
+        
     }
     
     func showMarker(position: CLLocationCoordinate2D){
         let marker = GMSMarker()
         marker.position = position
-        marker.icon = GMSMarker.markerImage(with: .black)
+        marker.icon = GMSMarker.markerImage(with: UIColor.cyan)
         marker.isFlat = true
         marker.title = "Palo Alto"
         marker.snippet = "San Francisco"
@@ -63,30 +69,27 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
         if let address = primaryContactFullAddress.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
             
             if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
-                UIApplication.shared.openURL(URL(string:
-                    "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
-            } else {
-                print("Can't use comgooglemaps://");
-            }
-            
-            /* ====================== this part working ok with google navigation
             let directionsRequest: String = "comgooglemaps-x-callback://" + "?daddr=\(address)" + "&x-success=sourceapp://?resume=true&x-source=AirApp"
                 //let directionsURL: NSURL = NSURL(string: directionsRequest)!
                 UIApplication.shared.openURL(URL(string: directionsRequest)!)
             } else {
                 NSLog("Can't use comgooglemaps-x-callback:// on this device.")
-             ====================== this part working ok with google navigation
-            */ 
- 
             }
- 
-        
         }
-    
+            
+        }
     }
     
-    
-    
+    @objc func btnMyLocationAction() {
+        UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+        
+    }
     
     
     
@@ -225,6 +228,16 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    let btnMyLocation: UIButton = {
+        let btn=UIButton()
+        btn.backgroundColor = UIColor.cyan
+        btn.layer.cornerRadius = 2
+        btn.tintColor = UIColor.gray
+        btn.addTarget(self, action: #selector(btnMyLocationAction), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints=false
+        return btn
+    }()
     
     
 }
