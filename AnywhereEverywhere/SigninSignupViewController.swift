@@ -23,7 +23,7 @@ class SigninSignupViewController: UIViewController {
         let parameters = "email=testdriver@gmail.com&password=Test@123&device_token=1232324234234&device_id=\(devid)&device_type=ios"
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
-        request.setValue("application/x-www-form-unlencoded;charset=utf-8", forHTTPHeaderField: "Cpntent-Type")
+        request.setValue("application/x-www-form-unlencoded;charset=utf-8", forHTTPHeaderField: "Content-Length")
         request.httpBody = parameters.data(using: String.Encoding.utf8)
         
         //let jsonUrlString = "https://www.appae.net/grabacab/public/api/provider/oauth/token?email=testdriver@gmail.com&password=Test@123&device_token=1232324234234&device_id=\(devid)&device_type=ios"
