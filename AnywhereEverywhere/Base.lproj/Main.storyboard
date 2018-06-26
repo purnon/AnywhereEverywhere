@@ -34,6 +34,7 @@
                                             <color key="titleColor" red="0.025170174923310393" green="0.008634584957156629" blue="0.090997409326424861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
+                                            <action selector="btnSignIn:" destination="SnM-fF-C4q" eventType="touchUpInside" id="h4t-nU-A3h"/>
                                             <segue destination="Jf2-uN-e8I" kind="show" id="9jd-C0-MJN"/>
                                         </connections>
                                     </button>
@@ -108,6 +109,8 @@
                     </view>
                     <connections>
                         <outlet property="btnEmailID" destination="6NP-XV-Zfg" id="9MH-GO-NyZ"/>
+                        <outlet property="txtEmail" destination="HiS-YO-qyR" id="kL5-vJ-sGy"/>
+                        <outlet property="txtPassword" destination="Lel-7D-da2" id="6FK-Ex-bTn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXr-QR-e6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
