@@ -4,10 +4,6 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need your location access always</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location access always</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,18 +18,36 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>comgooglemaps</string>
+		<string>comgooglemaps-x-callback</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>comgooglemaps</string>
-        <string>comgooglemaps-x-callback</string>
-    </array>
-    <key>NSAppTransportSecurity</key>
+	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We need your location access always</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location access always</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OpenSans-Bold</string>
+		<string>OpenSans-BoldItalic</string>
+		<string>OpenSans-ExtraBold</string>
+		<string>OpenSans-ExtraBoldItalic</string>
+		<string>OpenSans-Light</string>
+		<string>OpenSans-Italic</string>
+		<string>OpenSans-Regular</string>
+		<string>OpenSans-LightItalic</string>
+		<string>OpenSans-Semibold</string>
+		<string>OpenSans-SemiboldItalic</string>
+		<string>Futura Bold font</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -45,7 +59,19 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>FacebookAppID</key>
+    <string>409411866134137</string>
+    <key>AccountKitClientToken</key>
+    <string>9e3c6cfb3d84dbfbcd99faffda27d80b</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>ak{your-app-id}</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>

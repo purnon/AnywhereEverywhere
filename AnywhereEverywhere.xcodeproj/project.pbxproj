@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9E044E8D20C2ABF900B21A97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E044E8C20C2ABF800B21A97 /* CoreLocation.framework */; };
 		9E9AD08820BA8B0100B283DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD08720BA8B0100B283DA /* AppDelegate.swift */; };
-		9E9AD08A20BA8B0100B283DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD08920BA8B0100B283DA /* ViewController.swift */; };
+		9E9AD08A20BA8B0100B283DA /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD08920BA8B0100B283DA /* InitialViewController.swift */; };
 		9E9AD08D20BA8B0100B283DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AD08B20BA8B0100B283DA /* Main.storyboard */; };
 		9E9AD08F20BA8B0200B283DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AD08E20BA8B0200B283DA /* Assets.xcassets */; };
 		9E9AD09220BA8B0200B283DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E9AD09020BA8B0200B283DA /* LaunchScreen.storyboard */; };
@@ -22,6 +22,10 @@
 		9E9AD0A620BC361900B283DA /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A520BC361900B283DA /* PasswordViewController.swift */; };
 		9E9AD0A820BC364A00B283DA /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */; };
 		9E9AD0AA20BCA1C800B283DA /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9AD0A920BCA1C800B283DA /* HelpViewController.swift */; };
+		A4374DC020ECF5F700FA129C /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = A4374DBF20ECF5F700FA129C /* Fonts */; };
+		A4A6B62320ED0C410065B719 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6B62220ED0C410065B719 /* Constants.swift */; };
+		A4A6B62520ED0DBA0065B719 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6B62420ED0DBA0065B719 /* CommonFunctions.swift */; };
+		A4C5D79520EF908100020982 /* GetDataFromApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D79420EF908100020982 /* GetDataFromApi.swift */; };
 		F8E5587C61DBBBA50C979DA6 /* Pods_AnywhereEverywhere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6654B70DAA18A25C24DECC /* Pods_AnywhereEverywhere.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +34,9 @@
 		38937DE5557979B3E3C2B33E /* Pods-AnywhereEverywhere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnywhereEverywhere.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnywhereEverywhere/Pods-AnywhereEverywhere.release.xcconfig"; sourceTree = "<group>"; };
 		7E6654B70DAA18A25C24DECC /* Pods_AnywhereEverywhere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnywhereEverywhere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E044E8C20C2ABF800B21A97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		9E47849720C5F42F00CA7F02 /* AnywhereEverywhere.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnywhereEverywhere.entitlements; sourceTree = "<group>"; };
 		9E9AD08420BA8B0100B283DA /* AnywhereEverywhere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnywhereEverywhere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E9AD08720BA8B0100B283DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E9AD08920BA8B0100B283DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E9AD08920BA8B0100B283DA /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		9E9AD08C20BA8B0100B283DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E9AD08E20BA8B0200B283DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E9AD09120BA8B0200B283DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		9E9AD0A520BC361900B283DA /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		9E9AD0A920BCA1C800B283DA /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		A4374DBA20ECDC4E00FA129C /* AnywhereEverywhere.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = AnywhereEverywhere.entitlements; sourceTree = "<group>"; };
+		A4374DBF20ECF5F700FA129C /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		A4A6B62220ED0C410065B719 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A4A6B62420ED0DBA0065B719 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		A4C5D79420EF908100020982 /* GetDataFromApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDataFromApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,24 +100,36 @@
 		9E9AD08620BA8B0100B283DA /* AnywhereEverywhere */ = {
 			isa = PBXGroup;
 			children = (
-				9E47849720C5F42F00CA7F02 /* AnywhereEverywhere.entitlements */,
+				A4374DBA20ECDC4E00FA129C /* AnywhereEverywhere.entitlements */,
 				9E9AD08720BA8B0100B283DA /* AppDelegate.swift */,
-				9E9AD08920BA8B0100B283DA /* ViewController.swift */,
-				9E9AD08B20BA8B0100B283DA /* Main.storyboard */,
+				9E9AD08920BA8B0100B283DA /* InitialViewController.swift */,
+				9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */,
+				9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */,
 				9E9AD0A920BCA1C800B283DA /* HelpViewController.swift */,
 				9E9AD0A720BC364A00B283DA /* PasswordResetViewController.swift */,
 				9E9AD0A520BC361900B283DA /* PasswordViewController.swift */,
 				9E9AD0A320BC35D100B283DA /* TopupViewController.swift */,
 				9E9AD0A120BC359100B283DA /* EarningViewController.swift */,
 				9E9AD09F20BC353000B283DA /* SocialMediaViewController.swift */,
-				9E9AD09D20BC303400B283DA /* RegistrationViewController.swift */,
 				9E9AD09B20BC2EA200B283DA /* DriverHomeViewController.swift */,
-				9E9AD09920BA927D00B283DA /* SigninSignupViewController.swift */,
+				A4C5D79320EF88A100020982 /* Helping classes */,
 				9E9AD08E20BA8B0200B283DA /* Assets.xcassets */,
+				9E9AD08B20BA8B0100B283DA /* Main.storyboard */,
 				9E9AD09020BA8B0200B283DA /* LaunchScreen.storyboard */,
+				A4374DBF20ECF5F700FA129C /* Fonts */,
 				9E9AD09320BA8B0200B283DA /* Info.plist */,
 			);
 			path = AnywhereEverywhere;
+			sourceTree = "<group>";
+		};
+		A4C5D79320EF88A100020982 /* Helping classes */ = {
+			isa = PBXGroup;
+			children = (
+				A4C5D79420EF908100020982 /* GetDataFromApi.swift */,
+				A4A6B62220ED0C410065B719 /* Constants.swift */,
+				A4A6B62420ED0DBA0065B719 /* CommonFunctions.swift */,
+			);
+			path = "Helping classes";
 			sourceTree = "<group>";
 		};
 		D3FE42EE8779653BC7AEDA68 /* Frameworks */ = {
@@ -133,6 +153,7 @@
 				9E9AD08120BA8B0100B283DA /* Frameworks */,
 				9E9AD08220BA8B0100B283DA /* Resources */,
 				11ED56973E5242C629BF374E /* [CP] Copy Pods Resources */,
+				2B10E6BF04579C87EB00E148 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +210,7 @@
 				9E9AD09220BA8B0200B283DA /* LaunchScreen.storyboard in Resources */,
 				9E9AD08F20BA8B0200B283DA /* Assets.xcassets in Resources */,
 				9E9AD08D20BA8B0100B283DA /* Main.storyboard in Resources */,
+				A4374DC020ECF5F700FA129C /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,17 +224,39 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AnywhereEverywhere/Pods-AnywhereEverywhere-resources.sh",
+				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnywhereEverywhere/Pods-AnywhereEverywhere-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B10E6BF04579C87EB00E148 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AnywhereEverywhere/Pods-AnywhereEverywhere-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnywhereEverywhere/Pods-AnywhereEverywhere-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0224034C4186D9DC2A08BEA /* [CP] Check Pods Manifest.lock */ = {
@@ -241,7 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9AD0AA20BCA1C800B283DA /* HelpViewController.swift in Sources */,
-				9E9AD08A20BA8B0100B283DA /* ViewController.swift in Sources */,
+				9E9AD08A20BA8B0100B283DA /* InitialViewController.swift in Sources */,
+				A4C5D79520EF908100020982 /* GetDataFromApi.swift in Sources */,
 				9E9AD0A820BC364A00B283DA /* PasswordResetViewController.swift in Sources */,
 				9E9AD09C20BC2EA200B283DA /* DriverHomeViewController.swift in Sources */,
 				9E9AD08820BA8B0100B283DA /* AppDelegate.swift in Sources */,
@@ -250,7 +295,9 @@
 				9E9AD0A020BC353000B283DA /* SocialMediaViewController.swift in Sources */,
 				9E9AD09E20BC303400B283DA /* RegistrationViewController.swift in Sources */,
 				9E9AD0A220BC359100B283DA /* EarningViewController.swift in Sources */,
+				A4A6B62520ED0DBA0065B719 /* CommonFunctions.swift in Sources */,
 				9E9AD0A620BC361900B283DA /* PasswordViewController.swift in Sources */,
+				A4A6B62320ED0C410065B719 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,19 +442,21 @@
 			baseConfigurationReference = 1979295F06CF3C2DF8788EA1 /* Pods-AnywhereEverywhere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AnywhereEverywhere/AnywhereEverywhere.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2T5K75Y2G;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7855RRXU8S;
 				INFOPLIST_FILE = AnywhereEverywhere/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = appae.net.AnywhereEverywhere;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polly.any;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6e93f131-8d37-400e-b2be-188931d62d78";
+				PROVISIONING_PROFILE_SPECIFIER = "Common Development Profile";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -416,19 +465,21 @@
 			baseConfigurationReference = 38937DE5557979B3E3C2B33E /* Pods-AnywhereEverywhere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AnywhereEverywhere/AnywhereEverywhere.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W2T5K75Y2G;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7855RRXU8S;
 				INFOPLIST_FILE = AnywhereEverywhere/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = appae.net.AnywhereEverywhere;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polly.any;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6e93f131-8d37-400e-b2be-188931d62d78";
+				PROVISIONING_PROFILE_SPECIFIER = "Common Development Profile";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

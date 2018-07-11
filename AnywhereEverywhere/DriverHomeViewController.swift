@@ -2,7 +2,7 @@
 //  DriverHomeViewController.swift
 //  AnywhereEverywhere
 //
-//  Created by ALAM on 5/28/18.
+//  Created by Kazi on 5/28/18.
 //  Copyright © 2018 App AE. All rights reserved.
 //
 
@@ -18,6 +18,10 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBOutlet fileprivate weak var mapView: GMSMapView!
+    var carryToken = "Sign IN Success"
+    var carryLat = Double(0)
+    var carryLon = Double(0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +40,20 @@ class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
         } else {
            print("Can't use comgooglemaps://");
         }
+         
+         print(self.carryToken)
         */
+        print(self.carryLat)
+        print(self.carryLon)
         
         self.view.addSubview(btnMyLocation)
-        btnMyLocation.setTitle("Pickup", for:UIControlState.normal)
+        btnMyLocation.setTitle("Tab for Pickup", for:UIControlState.normal)
         btnMyLocation.setTitleColor(UIColor.black, for: UIControlState.normal)
-        btnMyLocation.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60).isActive=true
-        btnMyLocation.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive=true
-        btnMyLocation.widthAnchor.constraint(equalToConstant: 60).isActive=true
+        btnMyLocation.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -110).isActive=true
+        btnMyLocation.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive=true
+        btnMyLocation.widthAnchor.constraint(equalToConstant: 150).isActive=true
         btnMyLocation.heightAnchor.constraint(equalToConstant: 30).isActive=true
-        btnMyLocation.isHidden = true
+        btnMyLocation.isHidden = false
         
     }
     
