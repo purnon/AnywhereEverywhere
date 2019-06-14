@@ -2,41 +2,214 @@
 //  DriverHomeViewController.swift
 //  AnywhereEverywhere
 //
-//  Created by ALAM on 5/28/18.
+//  Created by Kazi on 5/28/18.
 //  Copyright © 2018 App AE. All rights reserved.
 //
 
 import UIKit
 import MapKit
+import CoreLocation
 import GoogleMaps
 
-class DriverHomeViewController: UIViewController {
+class DriverHomeViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var mainMapView: MKMapView!
+    //I am checking here some code from
+    //https://medium.freecodecamp.org/how-you-can-use-the-google-maps-sdk-with-ios-using-swift-4-a9bba26d9c4d
+    
+    
+    @IBOutlet fileprivate weak var mapView: GMSMapView!
+    var carryToken = "Sign IN Success"
+    var carryLat = Double(0)
+    var carryLon = Double(0)
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122.0, zoom: 17.0)
+        mapView.camera = camera
+        showMarker(position: camera.target)
+        
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        
+        /*
+        UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+        } else {
+           print("Can't use comgooglemaps://");
+        }
+         
+         print(self.carryToken)
+        */
+        print(self.carryLat)
+        print(self.carryLon)
+        
+        self.view.addSubview(btnMyLocation)
+        btnMyLocation.setTitle("Tab for Pickup", for:UIControlState.normal)
+        btnMyLocation.setTitleColor(UIColor.black, for: UIControlState.normal)
+        btnMyLocation.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -110).isActive=true
+        btnMyLocation.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40).isActive=true
+        btnMyLocation.widthAnchor.constraint(equalToConstant: 150).isActive=true
+        btnMyLocation.heightAnchor.constraint(equalToConstant: 30).isActive=true
+        btnMyLocation.isHidden = false
+        
+    }
+    
+    func showMarker(position: CLLocationCoordinate2D){
+        let marker = GMSMarker()
+        marker.position = position
+        marker.icon = GMSMarker.markerImage(with: UIColor.cyan)
+        marker.isFlat = true
+        marker.title = "Palo Alto"
+        marker.snippet = "San Francisco"
+        marker.map = mapView
+    }
+    
+    
+    @IBAction func btnONtest(_ sender: Any) {
+        
+        let primaryContactFullAddress = "M-45 - Abu Dhabi"
+        let testURL: NSURL = NSURL(string: "comgooglemaps-x-callback://")!
+        if UIApplication.shared.canOpenURL(testURL as URL) {
+            
+        if let address = primaryContactFullAddress.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) {
+            
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            let directionsRequest: String = "comgooglemaps-x-callback://" + "?daddr=\(address)" + "&x-success=sourceapp://?resume=true&x-source=AirApp"
+                //let directionsURL: NSURL = NSURL(string: directionsRequest)!
+                UIApplication.shared.openURL(URL(string: directionsRequest)!)
+            } else {
+                NSLog("Can't use comgooglemaps-x-callback:// on this device.")
+            }
+        }
+            
+        }
+    }
+    
+    @objc func btnMyLocationAction() {
+        UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/@42.585444,13.007813,6z")!)
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemapsurl://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+        
+    }
+    
+    
+    
+    // THE COMMENTED CODE START HERE - CHECKING FOR GOOGLE MAPS
+    /*
+    
+    @IBOutlet weak var mapView: GMSMapView!
+    
+    let locationManager = CLLocationManager()
+    var currentLocation = CLLocation(latitude: 23, longitude: 90)
+    var lat = Double(0)
+    var lng = Double(0)
+    var marker = GMSMarker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GMSServices.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
-        //GMSPlacesClient.provideAPIKey("AIzaSyBJJicsiZ9K36T2EzITdQqR3eeDsq9vnAU")
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 17.0)
+        self.mapView.camera=camera
+        //mapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+        mapView.isMyLocationEnabled = true
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 12.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        lat = -33.86
+        lng = 151.20
+        let currentLocation = CLLocationCoordinate2DMake(lat, lng)
+        marker = GMSMarker(position: currentLocation)
+        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+        marker.title = "Your Current Location"
+        marker.snippet = "Your City"
         marker.map = mapView
         
+        
+        locationManager.delegate=self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func btnONtest(_ sender: Any) {
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+        } else {
+            print("Can't use comgooglemaps://");
+        }
+        
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        //let center = location.coordinate
+        //let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+        //let region = MKCoordinateRegion(center: center, span: span)
+        lat = location.coordinate.latitude
+        lng = location.coordinate.longitude
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: 17.0)
+        self.mapView.camera=camera
+        // Creates a marker in the center of the map.
+        let currentLocation = CLLocationCoordinate2DMake(lat, lng)
+        marker = GMSMarker(position: currentLocation)
+        marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+        marker.title = "Your current location"
+        marker.snippet = "Your City"
+        marker.map = mapView
+        
+        //open(scheme: "https://www.google.com")
+        
+        
+    }
+    
+ 
+    func open(scheme: String) {
+        if let url = URL(string: scheme) {
+            if #available(iOS 10, *) { // For ios 10 and greater
+                UIApplication.shared.open(url, options: [:],
+                                          completionHandler: {
+                                            (success) in
+                                            print("Open \(scheme): \(success)")
+                })
+            } else { // for below ios 10.
+                let success = UIApplication.shared.openURL(url)
+                print("Open \(scheme): \(success)")
+            }
+        }
+    }
+    
+    
+    
+    /*
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            currentLocation = locationManager.location!
+            lat = currentLocation.coordinate.latitude
+            lng = currentLocation.coordinate.longitude
+            
+        } else {
+            locationManager.requestAlwaysAuthorization()
+            locationAuthStatus()
+        }
+        
+    }
+    */
+    
+    
+    
     
 
     /*
@@ -49,4 +222,33 @@ class DriverHomeViewController: UIViewController {
     }
     */
 
+    
+    
+    
+    
+    // THIS IS END OF COMMENTED CODE - CHECKING FOR GOOGLE MAPS 0N 05 Jun 2018
+ 
+ */
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    let btnMyLocation: UIButton = {
+        let btn=UIButton()
+        btn.backgroundColor = UIColor.cyan
+        btn.layer.cornerRadius = 2
+        btn.tintColor = UIColor.gray
+        btn.addTarget(self, action: #selector(btnMyLocationAction), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints=false
+        return btn
+    }()
+    
+    
 }
+
+
+
